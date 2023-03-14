@@ -32,3 +32,9 @@ tailwind.config.js
 To begin work:
 
 npm i
+
+Next, run:
+
+npm run supabase:start
+
+(^^^ This requires Docker to be installed)
