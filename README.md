@@ -28,3 +28,7 @@ cypress.config.ts
 global.d.ts
 postcss.config.js
 tailwind.config.js
+
+To begin work:
+
+npm i
