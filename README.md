@@ -38,3 +38,5 @@ Next, run:
 npm run supabase:start
 
 (^^^ This requires Docker to be installed)
+
+"supabase:status": "supabase status"
