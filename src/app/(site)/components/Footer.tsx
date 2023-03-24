@@ -26,13 +26,14 @@ function Footer() {
 
               <div>
                 <p className={'text-sm text-gray-500 dark:text-gray-400'}>
-                 ✔️Increase your revenue today.
+                  Add a short tagline about your product
                 </p>
               </div>
 
               <div className={'flex text-xs text-gray-500 dark:text-gray-400'}>
                 <p>
-                © {YEAR} {configuration.site.siteName}. All Rights Reserved.
+                  © Copyright {YEAR} {configuration.site.siteName}. All Rights
+                  Reserved.
                 </p>
               </div>
             </div>

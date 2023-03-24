@@ -12,10 +12,12 @@ import EmailPasswordSignUpContainer from '~/app/auth/components/EmailPasswordSig
 import If from '~/core/ui/If';
 import Button from '~/core/ui/Button';
 import Trans from '~/core/ui/Trans';
+import Alert from '~/core/ui/Alert';
 
 import configuration from '~/configuration';
 import useAcceptInvite from '~/app/invite/use-accept-invite';
 import PageLoadingIndicator from '~/core/ui/PageLoadingIndicator';
+import isBrowser from '~/core/generic/is-browser';
 
 enum Mode {
   SignUp,
@@ -26,12 +28,33 @@ function NewUserInviteForm() {
   const [mode, setMode] = useState<Mode>(Mode.SignUp);
   const acceptInvite = useAcceptInvite();
   const router = useRouter();
+  const oAuthReturnUrl = isBrowser() ? window.location.pathname : '';
 
-  const onInviteAccepted = useCallback(async () => {
-    await acceptInvite.trigger();
+  const onInviteAccepted = useCallback(
+    async (userId?: string) => {
+      const data = await acceptInvite.trigger({ userId });
+      const shouldVerifyEmail = data?.verifyEmail;
 
-    return router.push(configuration.paths.appHome);
-  }, [acceptInvite, router]);
+      // if the user is *not* required to confirm their email
+      // we redirect them to the app home
+      if (!shouldVerifyEmail) {
+        return router.push(configuration.paths.appHome);
+      }
+    },
+    [acceptInvite, router]
+  );
+
+  if (acceptInvite.data?.verifyEmail) {
+    return (
+      <Alert type={'success'}>
+        <Alert.Heading>
+          <Trans i18nKey={'auth:emailConfirmationAlertHeading'} />
+        </Alert.Heading>
+
+        <Trans i18nKey={'auth:emailConfirmationAlertBody'} />
+      </Alert>
+    );
+  }
 
   return (
     <>
@@ -41,7 +64,7 @@ function NewUserInviteForm() {
         </PageLoadingIndicator>
       </If>
 
-      <OAuthProviders onSignIn={onInviteAccepted} />
+      <OAuthProviders returnUrl={oAuthReturnUrl} />
 
       <If condition={configuration.auth.providers.emailPassword}>
         <If condition={mode === Mode.SignUp}>

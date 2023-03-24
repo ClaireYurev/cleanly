@@ -38,14 +38,14 @@ export default function Home() {
               >
                 <Button variant={'flat'} size={'small'} round>
                   <span className={'flex items-center space-x-2 font-normal'}>
-                    <span>Download our blueprint for free</span>
+                    <span>Explore our leading solution</span>
 
                     <ChevronRightIcon className={'h-3'} />
                   </span>
                 </Button>
 
                 <HeroTitle>
-                  <span>Technology is best when</span>
+                  <span>Tell your visitors why</span>
 
                   <span
                     className={
@@ -54,7 +54,7 @@ export default function Home() {
                       ' to-primary-400 leading-[1.2]'
                     }
                   >
-                    it brings people together.
+                    your SaaS is awesome
                   </span>
                 </HeroTitle>
 

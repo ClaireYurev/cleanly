@@ -4,12 +4,12 @@ const production = process.env.NODE_ENV === 'production';
 
 const configuration = {
   site: {
-    name: 'Cleanly - Increase Your Revenue Today',
+    name: 'Awesomely - Your SaaS Title',
     description: 'Your SaaS Description',
     themeColor: '#ffffff',
     themeColorDark: '#0a0a0a',
     siteUrl: process.env.NEXT_PUBLIC_SITE_URL,
-    siteName: 'Cleanly',
+    siteName: 'Awesomely',
     twitterHandle: '',
     githubHandle: '',
     language: 'en',
