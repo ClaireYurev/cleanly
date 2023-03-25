@@ -1,4 +1,4 @@
-import '../app/globals.css';
+import '~/app/globals.css';
 
 import Head from 'next/head';
 import { GetStaticPropsContext } from 'next';
