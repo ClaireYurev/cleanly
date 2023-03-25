@@ -8,7 +8,7 @@ import Heading from '~/core/ui/Heading';
 import Trans from '~/core/ui/Trans';
 
 import SiteHeader from '~/app/(site)/components/SiteHeader';
-import { PagesDirectoryFonts } from '../components/Fonts';
+import { PagesDirectoryFonts } from '~/components/Fonts';
 import I18nProvider from '~/i18n/I18nProvider';
 import configuration from '../configuration';
 
