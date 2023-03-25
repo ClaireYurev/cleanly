@@ -17,7 +17,7 @@ const NotFoundPage: React.FC<{
 }> = ({ locale }) => {
   return (
     <>
-      <PagesDirectoryFonts />
+      
 
       <Head>
         <title key="title">{`Page not found - ${configuration.site.name}`}</title>
