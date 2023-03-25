@@ -23,7 +23,6 @@ const NotFoundPage: React.FC<{
         <title key="title">{`Page not found - ${configuration.site.name}`}</title>
       </Head>
 
-      <SiteHeader />
     </>
   );
 };
