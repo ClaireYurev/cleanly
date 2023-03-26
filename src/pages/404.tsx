@@ -24,6 +24,17 @@ const NotFoundPage: React.FC<{
       </Head>
 
       <I18nProvider lang={locale}>
+      <div>
+                <Heading type={1}>
+                  <span
+                    data-cy={'catch-route-status-code'}
+                    className={'text-primary-500'}
+                  >
+                    404
+                  </span>
+                </Heading>
+              </div>
+
         <div
           className={
             'm-auto flex min-h-[50vh] w-full items-center justify-center'
