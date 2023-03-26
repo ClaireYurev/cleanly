@@ -29,6 +29,9 @@ const NotFoundPage: React.FC<{
             'm-auto flex min-h-[50vh] w-full items-center justify-center'
           }
         >
+          <p className={'text-gray-500 dark:text-gray-300'}>
+                    <Trans i18nKey={'common:pageNotFoundSubHeading'} />
+                  </p>
         </div>
       </I18nProvider>
 
