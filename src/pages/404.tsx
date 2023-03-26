@@ -22,6 +22,8 @@ const NotFoundPage: React.FC<{
       <Head>
         <title key="title">{`Page not found - ${configuration.site.name}`}</title>
       </Head>
+      
+      <SiteHeader />
 
       <I18nProvider lang={locale}>
       <div>
