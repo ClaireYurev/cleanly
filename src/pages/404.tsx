@@ -44,6 +44,11 @@ const NotFoundPage: React.FC<{
                     <Trans i18nKey={'common:pageNotFoundSubHeading'} />
                   </p>
         </div>
+        <div className={'flex space-x-4'}>
+                  <Button href={'/'}>
+                    <Trans i18nKey={'common:backToHomePage'} />
+                  </Button>
+                </div>
       </I18nProvider>
 
       
