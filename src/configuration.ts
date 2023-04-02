@@ -18,7 +18,6 @@ const configuration = {
   },
   auth: {
     // ensure this is the same as your Supabase project
-    // (test - delete)
     // by default - it's true in production and false in development
     requireEmailConfirmation:
       process.env.NEXT_PUBLIC_REQUIRE_EMAIL_CONFIRMATION === 'true',

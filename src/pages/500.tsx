@@ -9,7 +9,7 @@ import Heading from '~/core/ui/Heading';
 import Trans from '~/core/ui/Trans';
 import { PagesDirectoryFonts } from '~/components/Fonts';
 
-import SiteHeader from '~/app/(surf)/components/SiteHeader';
+import SiteHeader from '~/app/(site)/components/SiteHeader';
 import I18nProvider from '~/i18n/I18nProvider';
 
 const InternalServerErrorPage: React.FC<{
@@ -22,8 +22,9 @@ const InternalServerErrorPage: React.FC<{
         <PagesDirectoryFonts />
       </Head>
 
+      <SiteHeader />
+
       <I18nProvider lang={locale}>
-        <SiteHeader />
         <div
           className={
             'm-auto flex min-h-[50vh] w-full items-center justify-center'

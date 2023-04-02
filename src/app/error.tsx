@@ -4,7 +4,7 @@ import Button from '~/core/ui/Button';
 import Heading from '~/core/ui/Heading';
 import Trans from '~/core/ui/Trans';
 
-import SiteHeader from '~/app/(surf)/components/SiteHeader';
+import SiteHeader from '~/app/(site)/components/SiteHeader';
 import configuration from '~/configuration';
 
 export const metadata = {
