@@ -23,9 +23,8 @@ const NotFoundPage: React.FC<{
         <title key="title">{`Page not found - ${configuration.site.name}`}</title>
       </Head>
 
-      <SiteHeader />
-
       <I18nProvider lang={locale}>
+        <SiteHeader />
         <div
           className={
             'm-auto flex min-h-[50vh] w-full items-center justify-center'

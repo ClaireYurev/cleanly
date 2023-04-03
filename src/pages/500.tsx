@@ -22,9 +22,8 @@ const InternalServerErrorPage: React.FC<{
         <PagesDirectoryFonts />
       </Head>
 
-      <SiteHeader />
-
       <I18nProvider lang={locale}>
+        <SiteHeader />
         <div
           className={
             'm-auto flex min-h-[50vh] w-full items-center justify-center'
